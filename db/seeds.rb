@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+species = ["Dog", "Cat", "Pigeon", "Rabbit", "Fish", "Snake"]
+gender = ["male","female"]
+
+Pet.create!(name:Faker::Creature::Dog.name, species: species.sample, gender:gender.sample, bio:    )
