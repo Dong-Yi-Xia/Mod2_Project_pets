@@ -23,100 +23,101 @@
 # Adoption.reset_pk_sequence
 # Review.reset_pk_sequence
 
-species_d = “dog”
-species_c = “cat”
-species_r = “rabbit”
-species_p = “pigeon”
-species_f = “fish”
-species_s = “snake”
+species_d = "dog"
+species_c = "cat"
+species_r = "rabbit"
+species_p = "pigeon"
+species_f = "fish"
+species_s = "snake"
 
-gender_f = “female”
-gender_m = “male”
+gender_f = "female"
+gender_m = "male"
 
-bio1 = “Sugar is friendly, affectionate, fun, and playful. Her favorite game is tug of war and she just loves stuffed dog toys.”
-bio2 = “Charlie is a young, curious, and handsome pup. He loves being petted, playing with a water hose, and enjoys attention.”
-bio3 = “Tabitha has silky, soft fur and is a total snuggle bug! She loves affection and loves to be scooped up and carried around.”
-bio4 = “A natural charmer, Fritz makes fast friends with everyone he comes in contact with. He loves to watch the world from a sunny window.”
-bio5 = “Honey Bunny is a little sweetheart with a gentle, mellow soul. This little girl loves giving soft kisses to when you cuddle with her.” 
-bio6 = “Pupperino is an incredibly sweet young boy who is hard to slow down! He is ready to partake in snatching pizza from your hands!”
-bio7 = “Lily is a lap dog who just loves to shower you with kisses. She enjoys spending time outside and is a huge fan of playing fetch with tennis balls.” 
-bio8 = “Bubs is a coy gentleman with a shy side, but it doesn’t take long for him to warm up. He loves belly-rubs, rolling around and soaking up all the attention.”
-bio9 = “Don’t let looks fool you, Willow is fearless and outgoing! Willow is a very friendly girl who loves exploring and playing with a lot of toys.”)
-bio10 = “Despite his name, Wolf is a soft and gentle soul. Highly intelligent and motivated by food, he will follow you everywhere if you have a treat!” 
-bio11 = “Missy is a super sweet, adorable, friendly pup. Full of spunk, Missy loves to explore and she can often be found burrowing under clothes and blankets.”
-bio12 = “Shy at first, Doc is often found snuggling under pillows. He is easily won over with ear scratches and a constant supply of belly rubs.” 
-bio13 = “Mimosa loves calling the shots and beckons for undivided attention. She loves playing with toys and will find every opportunity to climb on your lap.”
-bio14 = “Please meet Boom Boom, a big personality in a small package. This dapper gent is feisty, friendly, and loves deep cheek rubs and pets!”
-bio15 = “Xena is truly a sweet and loving girl who lives up to her name. Very playful and intelligent, Xena loves learning new tricks and playing fetch.”
-bio16 = “Ollie is social, spunky, and a bit on the clumsy side when chasing after squirrels! He is such a good boy and he has never met a person he did not like!”
-bio17 = “Ruby is an adorable, loyal girl who always has your back. She loves to code and can complete all of your homework labs for you with her magical powers.”
-bio18 = “Deeply misunderstood and wrongly judged for his appearance, Li’l Britches would love nothing more than to cuddle in your hand and listen to you talk all day.”
-bio19 = “Glimmer is a beautiful master of her domain and has big eyes for the world. Although she has a short attention span, she’s always happy to see you!”
-bio20 = “Peanut would love to have a forever home with a software engineer. Peanut loves to code and may or may not know all the secrets of the universe. Won’t you give him a home?”
+bio1 = "Sugar is friendly, affectionate, fun, and playful. Her favorite game is tug of war and she just loves stuffed dog toys."
+bio2 = "Charlie is a young, curious, and handsome pup. He loves being petted, playing with a water hose, and enjoys attention."
+bio3 = "Tabitha has silky, soft fur and is a total snuggle bug! She loves affection and loves to be scooped up and carried around."
+bio4 = "A natural charmer, Fritz makes fast friends with everyone he comes in contact with. He loves to watch the world from a sunny window."
+bio5 = "Honey Bunny is a little sweetheart with a gentle, mellow soul. This little girl loves giving soft kisses to when you cuddle with her." 
+bio6 = "Pupperino is an incredibly sweet young boy who is hard to slow down! He is ready to partake in snatching pizza from your hands!"
+bio7 = "Lily is a lap dog who just loves to shower you with kisses. She enjoys spending time outside and is a huge fan of playing fetch with tennis balls." 
+bio8 = "Bubs is a coy gentleman with a shy side, but it doesn’t take long for him to warm up. He loves belly-rubs, rolling around and soaking up all the attention."
+bio9 = "Don’t let looks fool you, Willow is fearless and outgoing! Willow is a very friendly girl who loves exploring and playing with a lot of toys."
+bio10 = "Despite his name, Wolf is a soft and gentle soul. Highly intelligent and motivated by food, he will follow you everywhere if you have a treat!" 
+bio11 = "Missy is a super sweet, adorable, friendly pup. Full of spunk, Missy loves to explore and she can often be found burrowing under clothes and blankets."
+bio12 = "Shy at first, Doc is often found snuggling under pillows. He is easily won over with ear scratches and a constant supply of belly rubs." 
+bio13 = "Mimosa loves calling the shots and beckons for undivided attention. She loves playing with toys and will find every opportunity to climb on your lap."
+bio14 = "Please meet Boom Boom, a big personality in a small package. This dapper gent is feisty, friendly, and loves deep cheek rubs and pets!"
+bio15 = "Xena is truly a sweet and loving girl who lives up to her name. Very playful and intelligent, Xena loves learning new tricks and playing fetch."
+bio16 = "Ollie is social, spunky, and a bit on the clumsy side when chasing after squirrels! He is such a good boy and he has never met a person he did not like!"
+bio17 = "Ruby is an adorable, loyal girl who always has your back. She loves to code and can complete all of your homework labs for you with her magical powers."
+bio18 = "Deeply misunderstood and wrongly judged for his appearance, Li’l Britches would love nothing more than to cuddle in your hand and listen to you talk all day."
+bio19 = "Glimmer is a beautiful master of her domain and has big eyes for the world. Although she has a short attention span, she’s always happy to see you!"
+bio20 = "Peanut would love to have a forever home with a software engineer. Peanut loves to code and may or may not know all the secrets of the universe. Won’t you give him a home?"
 
+# variable = "string"
 
 # pet seed data with variable usage
 
-pet1 = Pet.create(name: “Sugar”, species: species_d, gender: gender_f, bio: bio1)
-pet2 = Pet.create(name: “Charlie”, species: species_d, gender: gender_m, bio: bio2)
-pet3 = Pet.create(name: “Tabitha”, species: species_c, gender: gender_f, bio: bio3)
-pet4 = Pet.create(name: “Fritz”, species: species_c, gender: gender_m, bio: bio4)
-pet5 = Pet.create(name: “Honey Bunny”, species: species_r, gender: gender_f, bio: bio5)
-pet6 = Pet.create(name: “Pupperoni”, species: species_d, gender: gender_m, bio: bio6)
-pet7 = Pet.create(name: “Lily”, species: species_d, gender: gender_f, bio: bio7)
-pet8 = Pet.create(name: “Bubs”, species: species_c, gender: gender_m, bio: bio8)
-pet9 = Pet.create(name: “Willow”, species: species_r, gender: gender_f, bio: bio9)
-pet10 = Pet.create(name: “Wolf”, species: species_d, gender: gender_m, bio: bio10)
-pet11 = Pet.create(name: “Missy”, species: species_d, gender: gender_f, bio: bio11)
-pet12 = Pet.create(name: “Doc”, species: species_c, gender: gender_m, bio: bio12)
-pet13 = Pet.create(name: “Mimosa”, species: species_c, gender: gender_f, bio: bio13)
-pet14 = Pet.create(name: “Boom Boom”, species: species_r, gender: gender_m, bio: bio14)
-pet15 = Pet.create(name: “Xena”, species: species_d, gender: gender_f, bio: bio15)
-pet16 = Pet.create(name: “Ollie”, species: species_d, gender: gender_m, bio: bio16)
-pet17 = Pet.create(name: “Ruby”, species: species_d, gender: gender_f, bio: bio17)
-pet18 = Pet.create(name: “Li’l Britches”, species: species_s, gender: gender_m, bio: bio18)
-pet19 = Pet.create(name: “Glimmer”, species: species_f, gender: gender_f, bio: bio19)
-pet20 = Pet.create(name: “Peanut”, species: species_p, gender: gender_m, bio: bio20)
+pet1 = Pet.create(name: "Sugar", species: species_d, gender: gender_f, bio: bio1)
+pet2 = Pet.create(name: "Charlie", species: species_d, gender: gender_m, bio: bio2)
+pet3 = Pet.create(name: "Tabitha", species: species_c, gender: gender_f, bio: bio3)
+pet4 = Pet.create(name: "Fritz", species: species_c, gender: gender_m, bio: bio4)
+pet5 = Pet.create(name: "Honey Bunny", species: species_r, gender: gender_f, bio: bio5)
+pet6 = Pet.create(name: "Pupperoni", species: species_d, gender: gender_m, bio: bio6)
+pet7 = Pet.create(name: "Lily", species: species_d, gender: gender_f, bio: bio7)
+pet8 = Pet.create(name: "Bubs", species: species_c, gender: gender_m, bio: bio8)
+pet9 = Pet.create(name: "Willow", species: species_r, gender: gender_f, bio: bio9)
+pet10 = Pet.create(name: "Wolf", species: species_d, gender: gender_m, bio: bio10)
+pet11 = Pet.create(name: "Missy", species: species_d, gender: gender_f, bio: bio11)
+pet12 = Pet.create(name: "Doc", species: species_c, gender: gender_m, bio: bio12)
+pet13 = Pet.create(name: "Mimosa", species: species_c, gender: gender_f, bio: bio13)
+pet14 = Pet.create(name: "Boom Boom", species: species_r, gender: gender_m, bio: bio14)
+pet15 = Pet.create(name: "Xena", species: species_d, gender: gender_f, bio: bio15)
+pet16 = Pet.create(name: "Ollie", species: species_d, gender: gender_m, bio: bio16)
+pet17 = Pet.create(name: "Ruby", species: species_d, gender: gender_f, bio: bio17)
+pet18 = Pet.create(name: "Li’l Britches", species: species_s, gender: gender_m, bio: bio18)
+pet19 = Pet.create(name: "Glimmer", species: species_f, gender: gender_f, bio: bio19)
+pet20 = Pet.create(name: "Peanut", species: species_p, gender: gender_m, bio: bio20)
 
 # pet seed data in long form
 
-# pet1 = Pet.create(name: “Sugar”, species: “dog”, gender: “female”, bio: “Sugar is friendly, affectionate, fun, and playful. Her favorite game is tug of war and she just loves stuffed dog toys.”)
+# pet1 = Pet.create(name: "Sugar", species: "dog", gender: "female", bio: "Sugar is friendly, affectionate, fun, and playful. Her favorite game is tug of war and she just loves stuffed dog toys.")
 
-# pet2 = Pet.create(name: “Charlie”, species: “dog”, gender: “male”, bio: “Charlie is a young, curious, and handsome pup. He loves being petted, playing with a water hose, and enjoys attention.”)
+# pet2 = Pet.create(name: "Charlie", species: "dog", gender: "male", bio: "Charlie is a young, curious, and handsome pup. He loves being petted, playing with a water hose, and enjoys attention.")
 
-# pet3 = Pet.create(name: “Tabitha”, species: “cat”, gender: “female”, bio: “Tabitha has silky, soft fur and is a total snuggle bug! She loves affection and loves to be scooped up and carried around.”)
+# pet3 = Pet.create(name: "Tabitha", species: "cat", gender: "female", bio: "Tabitha has silky, soft fur and is a total snuggle bug! She loves affection and loves to be scooped up and carried around.")
 
-# pet4 = Pet.create(name: “Fritz”, species: “cat”, gender: “male”, bio: “A natural charmer, Fritz makes fast friends with everyone he comes in contact with. He loves to watch the world from a sunny window.”)
+# pet4 = Pet.create(name: "Fritz", species: "cat", gender: "male", bio: "A natural charmer, Fritz makes fast friends with everyone he comes in contact with. He loves to watch the world from a sunny window.")
 
-# pet5 = Pet.create(name: “Honey Bunny”, species: “rabbit”, gender: “female”, bio: “Honey Bunny is a little sweetheart with a gentle, mellow soul. This little girl loves giving soft kisses to when you cuddle with her.”)
+# pet5 = Pet.create(name: "Honey Bunny", species: "rabbit", gender: "female", bio: "Honey Bunny is a little sweetheart with a gentle, mellow soul. This little girl loves giving soft kisses to when you cuddle with her.")
 
-# pet6 = Pet.create(name: “Pupperino”, species: “dog”, gender: “male”, bio: “Pupperino is an incredibly sweet young boy who is hard to slow down! He is ready to partake in snatching pizza from your hands!”)
+# pet6 = Pet.create(name: "Pupperino", species: "dog", gender: "male", bio: "Pupperino is an incredibly sweet young boy who is hard to slow down! He is ready to partake in snatching pizza from your hands!")
 
-# pet7 = Pet.create(name: “Lily”, species: “dog”, gender: “female”, bio: “Lily is a lap dog who just loves to shower you with kisses. She enjoys spending time outside and is a huge fan of playing fetch with tennis balls.”)
+# pet7 = Pet.create(name: "Lily", species: "dog", gender: "female", bio: "Lily is a lap dog who just loves to shower you with kisses. She enjoys spending time outside and is a huge fan of playing fetch with tennis balls.")
 
-# pet8 = Pet.create(name: “Bubs”, species: “cat”, gender: “male”, bio: “Bubs is a coy gentleman with a shy side, but it doesn’t take long for him to warm up. He loves belly-rubs, rolling around and soaking up all the attention.”)
+# pet8 = Pet.create(name: "Bubs", species: "cat", gender: "male", bio: "Bubs is a coy gentleman with a shy side, but it doesn’t take long for him to warm up. He loves belly-rubs, rolling around and soaking up all the attention.")
 
-# pet9 = Pet.create(name: “Willow”, species: “rabbit”, gender: “female”, bio: “Don’t let looks fool you, Willow is fearless and outgoing! Willow is a very friendly girl who loves exploring and playing with a lot of toys.”)
+# pet9 = Pet.create(name: "Willow", species: "rabbit", gender: "female", bio: "Don’t let looks fool you, Willow is fearless and outgoing! Willow is a very friendly girl who loves exploring and playing with a lot of toys.")
 
-# pet10 = Pet.create(name: “Wolf”, species: “dog”, gender: “male”, bio: “Despite his name, Wolf is a soft and gentle soul. Highly intelligent and motivated by food, he will follow you everywhere if you have a treat!”)
+# pet10 = Pet.create(name: "Wolf", species: "dog", gender: "male", bio: "Despite his name, Wolf is a soft and gentle soul. Highly intelligent and motivated by food, he will follow you everywhere if you have a treat!")
 
-# pet11 = Pet.create(name: “Missy”, species: “dog”, gender: “female”, bio: “Missy is a super sweet, adorable, friendly pup. Full of spunk, Missy loves to explore and she can often be found burrowing under clothes and blankets.”)
+# pet11 = Pet.create(name: "Missy", species: "dog", gender: "female", bio: "Missy is a super sweet, adorable, friendly pup. Full of spunk, Missy loves to explore and she can often be found burrowing under clothes and blankets.")
 
-# pet12 = Pet.create(name: “Doc”, species: “cat”, gender: “male”, bio: “Shy at first, Doc is often found snuggling under pillows. He is easily won over with ear scratches and a constant supply of belly rubs.”)
+# pet12 = Pet.create(name: "Doc", species: "cat", gender: "male", bio: "Shy at first, Doc is often found snuggling under pillows. He is easily won over with ear scratches and a constant supply of belly rubs.")
 
-# pet13 = Pet.create(name: “Mimosa”, species: “cat”, gender: “female”, bio: “Mimosa loves calling the shots and beckons for undivided attention. She loves playing with toys and will find every opportunity to climb on your lap.”)
+# pet13 = Pet.create(name: "Mimosa", species: "cat", gender: "female", bio: "Mimosa loves calling the shots and beckons for undivided attention. She loves playing with toys and will find every opportunity to climb on your lap.")
 
-# pet14 = Pet.create(name: “Boom Boom”, species: “rabbit”, gender: “male”, bio: “Please meet Boom Boom, a big personality in a small package. This dapper gent is feisty, friendly, and loves deep cheek rubs and pets!”)
+# pet14 = Pet.create(name: "Boom Boom", species: "rabbit", gender: "male", bio: "Please meet Boom Boom, a big personality in a small package. This dapper gent is feisty, friendly, and loves deep cheek rubs and pets!")
 
-# pet15 = Pet.create(name: “Xena”, species: “dog”, gender: “female”, bio: “Xena is truly a sweet and loving girl who lives up to her name. Very playful and intelligent, Xena loves learning new tricks and playing fetch.”)
+# pet15 = Pet.create(name: "Xena", species: "dog", gender: "female", bio: "Xena is truly a sweet and loving girl who lives up to her name. Very playful and intelligent, Xena loves learning new tricks and playing fetch.")
 
-# pet16 = Pet.create(name: “Ollie”, species: “dog”, gender: “male”, bio: “Ollie is social, spunky, and a bit on the clumsy side when chasing after squirrels! He is such a good boy and he has never met a person he did not like!”)
+# pet16 = Pet.create(name: "Ollie", species: "dog", gender: "male", bio: "Ollie is social, spunky, and a bit on the clumsy side when chasing after squirrels! He is such a good boy and he has never met a person he did not like!")
 
-# pet17 = Pet.create(name: “Ruby”, species: “dog”, gender: “female”, bio: “Ruby is an adorable, loyal girl who always has your back. She loves to code and can complete all of your homework labs for you with her magical powers.”)
+# pet17 = Pet.create(name: "Ruby", species: "dog", gender: "female", bio: "Ruby is an adorable, loyal girl who always has your back. She loves to code and can complete all of your homework labs for you with her magical powers.")
 
-# pet18 = Pet.create(name: “Li’l Britches”, species: “snake”, gender: “male”, bio: “Deeply misunderstood and wrongly judged for his appearance, Li’l Britches would love nothing more than to cuddle in your hand and listen to you talk all day.”)
+# pet18 = Pet.create(name: "Li’l Britches", species: "snake", gender: "male", bio: "Deeply misunderstood and wrongly judged for his appearance, Li’l Britches would love nothing more than to cuddle in your hand and listen to you talk all day.")
 
-# pet19 = Pet.create(name: “Glimmer”, species: “fish”, gender: “female”, bio: “Glimmer is a beautiful master of her domain and has big eyes for the world. Although she has a short attention span, she’s always happy to see you!”)
+# pet19 = Pet.create(name: "Glimmer", species: "fish", gender: "female", bio: "Glimmer is a beautiful master of her domain and has big eyes for the world. Although she has a short attention span, she’s always happy to see you!")
 
-# pet20 = Pet.create(name: “Peanut”, species: “pigeon”, gender: “male”, bio: “Peanut would love to have a forever home with a software engineer. Peanut loves to code and may or may not know all the secrets of the universe. Won’t you give him a home?”)
+# pet20 = Pet.create(name: "Peanut", species: "pigeon", gender: "male", bio: "Peanut would love to have a forever home with a software engineer. Peanut loves to code and may or may not know all the secrets of the universe. Won’t you give him a home?")
 
