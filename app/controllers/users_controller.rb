@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :authorization?, only: [:new, :create]
     # before_action 
     # determine what before_actions will be
     # skip_before_action :authorization?, only: [:login, :handle_login, :new, :create, :show]

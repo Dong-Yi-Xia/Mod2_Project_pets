@@ -19,8 +19,8 @@
 
     <% else %>
       <nav> 
-        <%= link_to "LOGIN CLICK HERE", login_path %> <br>
-        Signup <%= button_to "Signup", signup_path, method: :get%>
+        <%= button_to "LOGIN", login_path, method: :get%> <br>
+        <%= button_to "Signup", signup_path, method: :get%>
       </nav>
 
   <%end%>

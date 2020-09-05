@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    skip_before_action :authorization?, only: [:login, :handle_login, :new, :create]
+    skip_before_action :authorization?, only: [:new, :create]
 
       def new
         @error = flash[:error]
