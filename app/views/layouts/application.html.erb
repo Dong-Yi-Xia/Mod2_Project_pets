@@ -10,6 +10,28 @@
   </head>
 
   <body>
+  <% if logged_in_status %>
+
+      <nav>
+        LOGGED IN: <%= @current_user.name %> 
+        <%= button_to "LOG OUT", logout_path, method: :delete %>
+      </nav>
+
+    <% else %>
+      <nav> 
+        <%= link_to "LOGIN CLICK HERE", login_path %> <br>
+        Signup <%= button_to "Signup", signup_path, method: :get%>
+      </nav>
+
+  <%end%>
+
+  <nav>
+    <a>link 1</a>
+    <a>link 2</a>
+    <a>link 3</a>
+  </nav>
+
+
     <%= yield %>
   </body>
 </html>

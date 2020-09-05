@@ -1,0 +1,17 @@
+<h1>Login Form under session</h1>
+
+
+
+<% if @error %>
+    <%= @error%>
+<%end%>
+
+<h2> Log In </h2>
+
+<%= form_tag "/sessions" do  %>
+    <%= label_tag :name %><br>
+    <%= text_field_tag :name %><br>
+    <%= label_tag :password %> <br>
+    <%= password_field_tag :password %><br>
+    <%= submit_tag "Log In"%>
+<%end%>
