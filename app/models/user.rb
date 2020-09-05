@@ -6,5 +6,5 @@ class User < ApplicationRecord
     has_many :pets, through: :adoptions
     has_many :pets, through: :reviews
 
-
+    has_secure_password
 end
