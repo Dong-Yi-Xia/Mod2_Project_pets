@@ -58,6 +58,9 @@ bio20 = "Peanut would love to have a forever home with a software engineer. Pean
 
 # pet seed data with variable usage
 
+dong = User.create(name:"Dong", password: "abc123" )
+manny = User.create(name:"Manny", password: "123abc")
+
 pet1 = Pet.create(name: "Sugar", species: species_d, gender: gender_f, bio: bio1)
 pet2 = Pet.create(name: "Charlie", species: species_d, gender: gender_m, bio: bio2)
 pet3 = Pet.create(name: "Tabitha", species: species_c, gender: gender_f, bio: bio3)
