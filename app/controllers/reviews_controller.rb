@@ -18,11 +18,12 @@ class ReviewsController < ApplicationController
     end 
   
     def edit
-        @review = Review.find(params[:id])
+        byebug
+        @review = Review.find(params[@current_user.id])
     end 
   
     def update
-        @review = Review.find(params[:id])
+        @review 
         @review.update(review_params)
         redirect_to review_path(@review)
     end
