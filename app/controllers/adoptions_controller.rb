@@ -1,42 +1,42 @@
 class AdoptionsController < ApplicationController
 
-    # def index 
-    #     @adoptions = Adoption.all
-    # end
+    def index 
+        @adoptions = Adoption.all
+    end
      
-    # def show 
-    #     @adoption = Adoption.find(params[:id])
-    # end 
+    def show 
+        @adoption = Adoption.find(params[:id])
+    end 
   
-    # def new
-    #     @adoption = Adoption.new
-    # end 
+    def new
+        @adoption = Adoption.new
+    end 
   
-    # def create
-    #     @Adoption = Adoption.create(adoption_params)
-    #     redirect_to adoption_path(@adoption)
-    # end 
+    def create
+        @Adoption = Adoption.create(adoption_params)
+        redirect_to adoption_path(@adoption)
+    end 
   
-    # def edit
-    #     @adoption = Adoption.find(params[:id])
-    # end 
+    def edit
+        @adoption = Adoption.find(params[:id])
+    end 
   
-    # def update
-    #     @adoption = Adoption.find(params[:id])
-    #     @adoption.update(adoption_params)
-    #     redirect_to adoption_path(@adoption)
-    # end
+    def update
+        @adoption = Adoption.find(params[:id])
+        @adoption.update(adoption_params)
+        redirect_to adoption_path(@adoption)
+    end
   
-    # def destroy
-    #     @adoption = Adoption.find(params[:id])
-    #     @adoption.delete 
-    #     redirect_to adoptions_path
-    # end 
+    def destroy
+        @adoption = Adoption.find(params[:id])
+        @adoption.delete 
+        redirect_to adoptions_path
+    end 
   
-    # private
+    private
   
-    # def adoption_params
-    #     params.require(:adoption).permit(:status)
-    # end 
+    def adoption_params
+        params.require(:adoption).permit(:status)
+    end 
 
 end

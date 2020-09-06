@@ -52,24 +52,24 @@ class UsersController < ApplicationController
         end
     end 
   
-    # def edit
-    #     @user = user.find(params[:id])
-    # end 
+    def edit
+        @user = user.find(params[:id])
+    end 
   
-    # def update
-    #     if @user.update(user_param)
-    #         redirect_to user_path(@user)
-    #     else
-    #         flash[:errors] = @user.errors.full_messages
-    #         redirect_to edit_user_path
-    #     end
-    # end
+    def update
+        if @user.update(user_param)
+            redirect_to user_path(@user)
+        else
+            flash[:errors] = @user.errors.full_messages
+            redirect_to edit_user_path
+        end
+    end
   
-    # def destroy
-    #     @user = user.find(params[:id])
-    #     @user.delete 
-    #     redirect_to users_path
-    # end 
+    def destroy
+        @user = user.find(params[:id])
+        @user.delete 
+        redirect_to users_path
+    end 
   
     private
     def get_user
