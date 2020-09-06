@@ -3,9 +3,9 @@
 The "Pet" App is inspired by our cohort's love of dogs and all rescue animals.
 
 The user is presented with a fun platform of pets and not-so-ordinary pets, with several options: 
-* RENT: The user can book a rental "play-date" with the cute pet of their choice.
-* ADOPT: The user can adopt a pet and give him or her their forever home.
-* REVIEW: The user can rate and write a review of pets they have booked for play-dates and/or adopted.
+* Rent: The user can book a rental "play-date" with the cute pet of their choice.
+* Adopt: The user can adopt a pet and give him or her their forever home.
+* Review: The user can rate and write a review of pets they have booked for play-dates and/or adopted.
 
 The app implements Ruby on Rails MVC design structures and CRUD functionality.
 
@@ -13,7 +13,7 @@ The app implements Ruby on Rails MVC design structures and CRUD functionality.
 
 2 independent models: User, Pet
 
-3 joinder models: Rent, Adoption, Review
+3 joiner models: Rent, Adoption, Review
 
 User ---< Rent >--- Pet
 
