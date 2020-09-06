@@ -3,4 +3,13 @@
 
 <h3>My Appointments</h3>
 <h3>My Reviews</h3>
+    <% @current_user.reviews.each do |review|%>
+        Name of Pet: <%= link_to review.pet.name, pet_path(review.pet) %><br>
+        Species: <%= review.pet.species %><br>
+        My Rating: <%= review.rating %><br>
+        My Review: <%= review.content %><br>
+
+           <br>
+    <%end%>
+
 <h3>My Adoptions</h3>
