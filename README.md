@@ -12,10 +12,13 @@ The app implements Ruby on Rails MVC design structures and CRUD functionality.
 # Domain-Modeling
 
 2 independent models: User, Pet
+
 3 joinder models: Rent, Adoption, Review
 
 User ---< Rent >--- Pet
+
 User ---< Adoption >--- Pet
+
 User ---< Review >--- Pet
 
 ***
@@ -28,15 +31,16 @@ To run the "Pet" App, you will need to use the terminal on your computer.
 
 ## Installation and Running the Application
 
-After cloning the repository onto your computer, please run the following commands, one at a time, in your terminal:
+After cloning and opening the repository onto your computer, please run the following commands, one at a time, in your terminal:
 ```
     bundle install
-    rake db:migrate
-    rake db:seed
+    rails db:migrate
+    rails db:seed
+    rails s
 ```
-To run the App, type the following into the terminal:
+To run the App, type the following into your web browser:
 ```
-    ruby bin/run.rb 
+    http://localhost:3000/ 
 ```
 
 ## Contributors
