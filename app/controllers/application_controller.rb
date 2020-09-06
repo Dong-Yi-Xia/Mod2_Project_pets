@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
 
-    helper_method :logged_in_status
+    helper_method :logged_in_status, :current_user
     before_action :authorization? 
-
-
 
     def current_user
         @current_user ||= User.find_by(id: session[:user_id])
