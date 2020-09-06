@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :reviews
+  resources :reviews, except: [:delete]
   resources :adoptions
   resources :rents
   resources :pets
