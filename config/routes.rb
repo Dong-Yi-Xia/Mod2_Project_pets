@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create", as: "sessions"
   delete "/logout", to: "sessions#destroy", as: "logout"
 
-  # root to: "welcomes#home", as: "home"
+  root to: "welcomes#home", as: "home"
 
 
 end
