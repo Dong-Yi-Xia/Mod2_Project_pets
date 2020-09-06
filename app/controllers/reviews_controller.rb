@@ -13,8 +13,8 @@ class ReviewsController < ApplicationController
     end 
   
     def create
-        @review = Review.create(review_params)
-        redirect_to review_path(@review)
+        @review = @current_user.reviews.create(review_params)
+        redirect_to user_path(@current_user)
     end 
   
     def edit
@@ -27,16 +27,16 @@ class ReviewsController < ApplicationController
         redirect_to review_path(@review)
     end
   
-    def destroy
-        @review = Review.find(params[:id])
-        @review.delete 
-        redirect_to reviews_path
-    end 
+    # def destroy
+    #     @review = Review.find(params[:id])
+    #     @review.delete 
+    #     redirect_to reviews_path
+    # end 
   
     private
   
     def review_params
-        params.require(:review).permit(:rating, :content)
+        params.require(:review).permit(:rating, :content, :pet_id)
     end 
 
 

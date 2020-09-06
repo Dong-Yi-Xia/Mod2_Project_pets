@@ -29,11 +29,11 @@ class PetsController < ApplicationController
         redirect_to pet_path(@pet)
     end
   
-    def destroy
-        @pet = Pet.find(params[:id])
-        @pet.delete 
-        redirect_to projects_path
-    end 
+    # def destroy
+    #     @pet = Pet.find(params[:id])
+    #     @pet.delete 
+    #     redirect_to projects_path
+    # end 
     # LOL, we don't want to destroy pets!
   
     private
