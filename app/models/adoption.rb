@@ -2,8 +2,8 @@ class Adoption < ApplicationRecord
   belongs_to :user
   belongs_to :pet
 
-  def find_male
-    Pet.all.find_by(gender: "male")
+  def up_for_adoption
+    Pet.where(:adoption_status => "yes")
   end 
 
 end

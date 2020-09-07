@@ -14,7 +14,7 @@ class AdoptionsController < ApplicationController
   
     def create
         @adoption = @current_user.adoptions.create(adoption_params)
-        redirect_to adoption_path(@adoption)
+        redirect_to user_path(@current_user)
     end 
   
     def edit
@@ -24,7 +24,7 @@ class AdoptionsController < ApplicationController
     def update
         @adoption = Adoption.find(params[:id])
         @adoption.update(adoption_params)
-        redirect_to adoption_path(@adoption)
+        redirect_to user_path(@current_user)
     end
   
     def destroy

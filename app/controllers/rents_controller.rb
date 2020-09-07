@@ -24,7 +24,7 @@ class RentsController < ApplicationController
     def update
         @rent = Rent.find(params[:id])
         @rent.update(rent_params)
-        redirect_to rent_path(@rent)
+        redirect_to user_path(@current_user)
     end
   
     def destroy

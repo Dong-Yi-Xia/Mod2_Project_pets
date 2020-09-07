@@ -82,3 +82,18 @@ Things you may want to cover:
 Emmanuel Jose ..... -->
 
 
+<pets/show/id >
+
+  <%= form_for @pet.reviews do |f| %>
+  <strong><%= label_tag 'Rating:' %><br></strong>
+  <%= f.radio_button :rating, 1 %>1
+  <%= f.radio_button :rating, 2 %>2
+  <%= f.radio_button :rating, 3 %>3
+  <%= f.radio_button :rating, 4 %>4
+  <%= f.radio_button :rating, 5 %>5<br><br>
+  <%= f.label 'Content:' %>  <br>
+  <%= f.text_area :content %><br><br>
+
+  <%= submit_tag "Create Review" %>
+  <% end %> 
+
