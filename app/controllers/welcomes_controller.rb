@@ -3,6 +3,7 @@ class WelcomesController < ApplicationController
 
     def home
        current_user
+       @pets = Pet.all
     end
 
 end

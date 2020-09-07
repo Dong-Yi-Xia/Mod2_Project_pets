@@ -1,5 +1,5 @@
-class PetsController < ApplicationController
-    skip_before_action :authorization?, only: [:index]
+class PetsController < ApplicationController 
+   
 
     def index 
         @pets = Pet.all
