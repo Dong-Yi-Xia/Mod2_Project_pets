@@ -13,9 +13,11 @@
 
     <nav>
       <a><%=link_to "Home", home_path %></a>
-      <a><%=link_to "All Pets", pets_path %></a>
-      <a><%=link_to "My Profile", user_path(@current_user) %></a>
-      <a><%=link_to "Reviews", reviews_path %></a>
+      <%if @current_user %>
+        <a><%=link_to "All Pets", pets_path %></a>
+        <a><%=link_to "My Profile", user_path(@current_user) %></a>
+        <a><%=link_to "Reviews", reviews_path %></a>
+      <%end%>
       <a>About</a>
       <a>Contact</a>
     </nav>
