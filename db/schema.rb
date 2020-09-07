@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_225810) do
+ActiveRecord::Schema.define(version: 2020_09_07_195924) do
 
   create_table "adoptions", force: :cascade do |t|
-    t.boolean "status"
     t.integer "user_id", null: false
     t.integer "pet_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_225810) do
     t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "adoption_status"
   end
 
   create_table "rents", force: :cascade do |t|

@@ -13,10 +13,10 @@ class RentsController < ApplicationController
     end 
   
     def create
-        @rent = Rent.create(rent_params)
-        redirect_to rent_path(@rent)
+        @rent = @current_user.rents.create(rent_params)
+        redirect_to user_path(@current_user)
     end 
-  
+    
     def edit
         @rent = Rent.find(params[:id])
     end 
@@ -24,7 +24,7 @@ class RentsController < ApplicationController
     def update
         @rent = Rent.find(params[:id])
         @rent.update(rent_params)
-        redirect_to rent_path(@rent)
+        redirect_to user_path(@current_user)
     end
   
     def destroy
@@ -36,7 +36,7 @@ class RentsController < ApplicationController
     private
   
     def rent_params
-        params.require(:rent).permit(:location, :duration)
+        params.require(:rent).permit(:location, :duration, :pet_id)
     end 
 
 end
