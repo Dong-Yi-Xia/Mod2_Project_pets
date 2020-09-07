@@ -4,3 +4,7 @@
 Name of Pet: <%= @review.pet.name%><br>
 Rating: <%= @review.rating %><br>
 Review: <%= @review.content %><br>
+
+
+<br>
+<%= button_to "Delete this review", @review, :method => :delete %>
