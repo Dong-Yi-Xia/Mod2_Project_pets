@@ -7,23 +7,15 @@
 <strong>Bio:</strong> <%= @pet.bio %>
 <br>
 <br>
-<!-- <%= form_for @pet do |f| %>
-  <strong><%= label_tag 'Rating:' %><br></strong>
-  <%= radio_button_tag :rating, 1 %>1
-  <%= radio_button_tag :rating, 2 %>2
-  <%= radio_button_tag :rating, 3 %>3
-  <%= radio_button_tag :rating, 4 %>4
-  <%= radio_button_tag :rating, 5 %>5<br><br>
-  <%= label_tag 'Content:' %>  <br>
-  <%= text_area_tag :content %><br><br>
+<strong>Adoption Status:</strong> <%= @pet.adoption_status %>
+<br>
+<br>
 
-  <%= submit_tag "Create Review" %>
-<% end %> -->
 
 <br>
 <br>
-<%=link_to "Rent Me!", rents_path %><br> <!-- figure out function for user, not index-->
+<%=link_to "Rent Me!", new_rent_path %><br> <!-- figure out function for user, not index-->
 <br>
 <%=link_to "Review Me!", new_review_path %><br> <!-- figure out function for user, not index-->
 <br>
-<%=link_to "Adopt Me!", adoptions_path %> <!-- figure out function for user, not index-->
+<%=link_to "Adopt Me!", new_adoption_path %> <!-- figure out function for user, not index-->

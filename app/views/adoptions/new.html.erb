@@ -1,2 +1,12 @@
 <h1> adoptions/new </h1>
-<h1> Hello World </h1>
+
+<h1>Adopt a Pet!</h1>
+
+<%= form_for @adoption do |f| %>
+    <%= f.label "Pet's Name" %>
+    <%= f.collection_select :pet_id, @adoption.up_for_adoption, :id, :name %><br>
+    <br>
+
+    <%= f.submit "Adopt this pet!"%>
+
+<% end %>

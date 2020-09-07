@@ -1,34 +1,25 @@
 <h1> reviews/new </h1>
 <h1> Hello World </h1>
 
-<%= form_for @review do |f| %>
-    <%= f.label "Pet's Name" %>
+
+
+ <%= form_for @review do |f| %>
+
+  <%= f.label "Pet's Name" %>
     <%= f.collection_select :pet_id, Pet.all, :id, :name %>
-    <br>
-    <%= f.label :rating %>
-    <%= f.number_field :rating %><br>
-    <br>
-    <%= f.label :content %>
-    <%= f.text_area :content %><br>
-    <br>
+  <br>
 
-    <%= f.submit %>
-
-<% end %>
-
-<!-- <%= form_for @review do |f| %>
-
-  <%= label_tag 'Rating:' %><br>
-  <%= radio_button_tag :rating, 1 %>1
-  <%= radio_button_tag :rating, 2 %>2
-  <%= radio_button_tag :rating, 3 %>3
-  <%= radio_button_tag :rating, 4 %>4
-  <%= radio_button_tag :rating, 5 %>5<br><br>
+  <%= f.label 'Rating:' %><br>
+  <%= f.radio_button :rating, 1 %>1
+  <%= f.radio_button :rating, 2 %>2
+  <%= f.radio_button :rating, 3 %>3
+  <%= f.radio_button :rating, 4 %>4
+  <%= f.radio_button :rating, 5 %>5<br><br>
 
 
-  <%= label_tag 'Content:' %>  <br>
-  <%= text_area_tag :content %><br><br>
+  <%= f.label 'Content:' %>  <br>
+  <%= f.text_area :content %><br><br>
 
   <%= submit_tag "Create Review" %>
-<% end %> -->
+<% end %> 
 

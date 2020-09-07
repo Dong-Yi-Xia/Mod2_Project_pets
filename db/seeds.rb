@@ -11,17 +11,17 @@
 
 # Pet.create!(name:Faker::Creature::Dog.name, species: species.sample, gender:gender.sample, bio:    )
 
-# Pet.destroy_all
-# User.destroy_all
-# Rent.destroy_all
-# Adoption.destroy_all
-# Review.destroy_all
+Pet.destroy_all
+User.destroy_all
+Rent.destroy_all
+Adoption.destroy_all
+Review.destroy_all
 
-# Pet.reset_pk_sequence
-# User.reset_pk_sequence
-# Rent.reset_pk_sequence
-# Adoption.reset_pk_sequence
-# Review.reset_pk_sequence
+Pet.reset_pk_sequence
+User.reset_pk_sequence
+Rent.reset_pk_sequence
+Adoption.reset_pk_sequence
+Review.reset_pk_sequence
 
 species_d = "dog"
 species_c = "cat"
@@ -61,26 +61,26 @@ bio20 = "Peanut would love to have a forever home with a software engineer. Pean
 dong = User.create(name:"Dong", password: "abc123" )
 manny = User.create(name:"Manny", password: "123abc")
 
-pet1 = Pet.create(name: "Sugar", species: species_d, gender: gender_f, bio: bio1)
-pet2 = Pet.create(name: "Charlie", species: species_d, gender: gender_m, bio: bio2)
-pet3 = Pet.create(name: "Tabitha", species: species_c, gender: gender_f, bio: bio3)
-pet4 = Pet.create(name: "Fritz", species: species_c, gender: gender_m, bio: bio4)
-pet5 = Pet.create(name: "Honey Bunny", species: species_r, gender: gender_f, bio: bio5)
-pet6 = Pet.create(name: "Pupperoni", species: species_d, gender: gender_m, bio: bio6)
-pet7 = Pet.create(name: "Lily", species: species_d, gender: gender_f, bio: bio7)
-pet8 = Pet.create(name: "Bubs", species: species_c, gender: gender_m, bio: bio8)
-pet9 = Pet.create(name: "Willow", species: species_r, gender: gender_f, bio: bio9)
-pet10 = Pet.create(name: "Wolf", species: species_d, gender: gender_m, bio: bio10)
-pet11 = Pet.create(name: "Missy", species: species_d, gender: gender_f, bio: bio11)
-pet12 = Pet.create(name: "Doc", species: species_c, gender: gender_m, bio: bio12)
-pet13 = Pet.create(name: "Mimosa", species: species_c, gender: gender_f, bio: bio13)
-pet14 = Pet.create(name: "Boom Boom", species: species_r, gender: gender_m, bio: bio14)
-pet15 = Pet.create(name: "Xena", species: species_d, gender: gender_f, bio: bio15)
-pet16 = Pet.create(name: "Ollie", species: species_d, gender: gender_m, bio: bio16)
-pet17 = Pet.create(name: "Ruby", species: species_d, gender: gender_f, bio: bio17)
-pet18 = Pet.create(name: "Li’l Britches", species: species_s, gender: gender_m, bio: bio18)
-pet19 = Pet.create(name: "Glimmer", species: species_f, gender: gender_f, bio: bio19)
-pet20 = Pet.create(name: "Peanut", species: species_p, gender: gender_m, bio: bio20)
+pet1 = Pet.create(name: "Sugar", species: species_d, gender: gender_f, bio: bio1, adoption_status: "yes")
+pet2 = Pet.create(name: "Charlie", species: species_d, gender: gender_m, bio: bio2, adoption_status: "yes")
+pet3 = Pet.create(name: "Tabitha", species: species_c, gender: gender_f, bio: bio3, adoption_status: "yes")
+pet4 = Pet.create(name: "Fritz", species: species_c, gender: gender_m, bio: bio4, adoption_status: "yes")
+pet5 = Pet.create(name: "Honey Bunny", species: species_r, gender: gender_f, bio: bio5, adoption_status: "yes")
+pet6 = Pet.create(name: "Pupperoni", species: species_d, gender: gender_m, bio: bio6, adoption_status: "yes")
+pet7 = Pet.create(name: "Lily", species: species_d, gender: gender_f, bio: bio7, adoption_status: "yes")
+pet8 = Pet.create(name: "Bubs", species: species_c, gender: gender_m, bio: bio8, adoption_status: "yes")
+pet9 = Pet.create(name: "Willow", species: species_r, gender: gender_f, bio: bio9, adoption_status: "yes")
+pet10 = Pet.create(name: "Wolf", species: species_d, gender: gender_m, bio: bio10, adoption_status: "no")
+pet11 = Pet.create(name: "Missy", species: species_d, gender: gender_f, bio: bio11, adoption_status: "no")
+pet12 = Pet.create(name: "Doc", species: species_c, gender: gender_m, bio: bio12, adoption_status: "no")
+pet13 = Pet.create(name: "Mimosa", species: species_c, gender: gender_f, bio: bio13, adoption_status: "no")
+pet14 = Pet.create(name: "Boom Boom", species: species_r, gender: gender_m, bio: bio14, adoption_status: "no")
+pet15 = Pet.create(name: "Xena", species: species_d, gender: gender_f, bio: bio15, adoption_status: "no")
+pet16 = Pet.create(name: "Ollie", species: species_d, gender: gender_m, bio: bio16, adoption_status: "no")
+pet17 = Pet.create(name: "Ruby", species: species_d, gender: gender_f, bio: bio17, adoption_status: "no")
+pet18 = Pet.create(name: "Li’l Britches", species: species_s, gender: gender_m, bio: bio18, adoption_status: "no")
+pet19 = Pet.create(name: "Glimmer", species: species_f, gender: gender_f, bio: bio19, adoption_status: "no")
+pet20 = Pet.create(name: "Peanut", species: species_p, gender: gender_m, bio: bio20, adoption_status: "no")
 
 # pet seed data in long form
 
