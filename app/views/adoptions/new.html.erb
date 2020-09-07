@@ -4,7 +4,7 @@
 
 <%= form_for @adoption do |f| %>
     <%= f.label "Pet's Name" %>
-    <%= f.collection_select :pet_id, Pet.all, :id, :name %><br>
+    <%= f.collection_select :pet_id, Pet.all.select(gender: "male"), :id, :name %><br>
     <br>
 
     <%= f.submit "Adopt this pet!"%>

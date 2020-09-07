@@ -13,7 +13,7 @@ class AdoptionsController < ApplicationController
     end 
   
     def create
-        @Adoption = Adoption.create(adoption_params)
+        @adoption = @current_user.adoptions.create(adoption_params)
         redirect_to adoption_path(@adoption)
     end 
   
@@ -36,7 +36,7 @@ class AdoptionsController < ApplicationController
     private
   
     def adoption_params
-        params.require(:adoption).permit(:status)
+        params.require(:adoption).permit(:status, :pet_id)
     end 
 
 end
