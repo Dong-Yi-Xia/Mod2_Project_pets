@@ -16,7 +16,7 @@ class RentsController < ApplicationController
         @rent = Rent.create(rent_params)
         redirect_to rent_path(@rent)
     end 
-  
+    
     def edit
         @rent = Rent.find(params[:id])
     end 

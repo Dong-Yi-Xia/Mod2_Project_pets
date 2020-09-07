@@ -1,2 +1,22 @@
 <h1> rents/new </h1>
 <h1> Hello World </h1>
+
+<h1>Rent a Pet!</h1>
+
+<%= form_for @rent do |f| %>
+    <%= f.label "Pet's Name" %>
+    <%= f.collection_select :pet_id, Pet.all, :id, :name %>
+    <br>
+    <br>
+    <%= label_tag 'Duration:' %><br></strong>
+    <%= radio_button_tag :duration, 30 %> 30 minutes
+    <%= radio_button_tag :duration, 60 %> 60 minutes
+    <%= radio_button_tag :duration, 90 %> 90 minutes
+    <%= radio_button_tag :duration, 120 %> 120 minutes<br><br>
+    <%= f.label :location %>
+    <%= f.text_field :location %><br>
+    <br>
+
+    <%= f.submit "Rent this pet!"%>
+
+<% end %>

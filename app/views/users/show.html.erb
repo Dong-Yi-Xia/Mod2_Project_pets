@@ -1,7 +1,7 @@
 <h1> users/show </h1>
 <h1> Hello World </h1>
 
-<h3>My Appointments</h3>
+
 <h3>My Reviews</h3>
     <% @current_user.reviews.each do |review|%>
         Name of Pet: <%= link_to review.pet.name, pet_path(review.pet) %><br>
@@ -9,7 +9,15 @@
         My Rating: <%= review.rating %><br>
         My Review: <%= review.content %><br>
 
-           <br>
-    <%end%>
+        <br>
+<%end%>
 
-<h3>My Adoptions</h3>
+<h3>My Pet Rentals</h3>
+    <% @current_user.rents.each do |review|%>
+        Name of Pet: <%= link_to rent.pet.name, pet_path(rent.pet) %><br>
+        Species: <%= rent.pet.species %><br>
+        My Rating: <%= rent.rating %><br>
+        My Review: <%= rent.content %><br>
+
+        <br>
+<%end%>
