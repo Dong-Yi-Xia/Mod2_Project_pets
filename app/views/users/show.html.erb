@@ -8,16 +8,14 @@
         Species: <%= review.pet.species %><br>
         My Rating: <%= review.rating %><br>
         My Review: <%= review.content %><br>
-
         <br>
 <%end%>
 
 <h3>My Pet Rentals</h3>
-    <% @current_user.rents.each do |review|%>
+    <% @current_user.rents.each do |rent|%>
         Name of Pet: <%= link_to rent.pet.name, pet_path(rent.pet) %><br>
         Species: <%= rent.pet.species %><br>
-        My Rating: <%= rent.rating %><br>
-        My Review: <%= rent.content %><br>
-
+        Duration: <%= rent.duration%> Minutes <br>
+        Location: <%= rent.location%> <br>
         <br>
 <%end%>
