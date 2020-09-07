@@ -16,6 +16,16 @@ class ReviewsController < ApplicationController
         @review = @current_user.reviews.create(review_params)
         redirect_to user_path(@current_user)
     end 
+
+    # def create 
+    #     @review = Review.new(review_params)
+    #     if @review.save 
+    #         redirect_to "/pets/#{pet.id}"
+    #     else
+    #         flash.now[:notice] = "One or more fields is blank."
+    #         render :new
+    #     end
+    # end
   
     def edit
         byebug
