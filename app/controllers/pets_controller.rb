@@ -7,7 +7,7 @@ class PetsController < ApplicationController
      
     def show 
         @pet = Pet.find(params[:id])
-        # byebug
+        #stretch goal
         # @review = @pet.reviews.create( user: @current_user) 
         # @rent = @pet.rents.create( user: @current_user) 
         # @adoption = @pet.adoptions.create( user: @current_user) 
@@ -17,13 +17,13 @@ class PetsController < ApplicationController
     def new
         @pet = Pet.new
     end 
-    # Do we need to allow user to create a new pet?
+    
   
     def create
         @pet = Pet.create(pet_params)
         redirect_to pet_path(@pet)
     end 
-     # Do we need to allow user to create a new pet?
+  
   
     def edit
         @pet = Pet.find(params[:id])

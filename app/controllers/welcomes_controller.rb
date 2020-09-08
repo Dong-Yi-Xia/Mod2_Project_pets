@@ -6,4 +6,12 @@ class WelcomesController < ApplicationController
        @pets = Pet.all
     end
 
+    def about
+        current_user
+    end
+
+    def contact 
+        current_user
+    end
+
 end
