@@ -6,23 +6,5 @@
 <%end%>
 
 
- <%= form_for @review do |f| %>
-
-  <%= f.label "Pet's Name" %>
-    <%= f.collection_select :pet_id, Pet.all, :id, :name %>
-  <br>
-
-  <%= f.label 'Rating:' %><br>
-  <%= f.radio_button :rating, 1 %>1
-  <%= f.radio_button :rating, 2 %>2
-  <%= f.radio_button :rating, 3 %>3
-  <%= f.radio_button :rating, 4 %>4
-  <%= f.radio_button :rating, 5 %>5<br><br>
-
-
-  <%= f.label 'Content:' %>  <br>
-  <%= f.text_area :content %><br><br>
-
-  <%= f.submit "Submit Review" %>
-<% end %> 
+<%= render "form" %>
 
