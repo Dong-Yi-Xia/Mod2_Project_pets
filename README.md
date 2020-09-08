@@ -11,7 +11,7 @@ The app implements Ruby on Rails MVC design structures and CRUD functionality.
 
 # Domain-Modeling
 
-app/assets/images/petmodels.jpg
+![erd](app/assets/images/petmodels.jpg)
 
 2 independent models: User, Pet
 
