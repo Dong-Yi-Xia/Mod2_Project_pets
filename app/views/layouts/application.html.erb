@@ -18,8 +18,8 @@
         <a><%=link_to "My Profile", user_path(@current_user) %></a>
         <a><%=link_to "New Review", new_review_path %></a>
       <%end%>
-      <a>About</a>
-      <a>Contact</a>
+      <a><%=link_to "About", about_path %></a>
+      <a><%=link_to "Contact", contact_path %></a>
     </nav>
     <br>
     <hr>
