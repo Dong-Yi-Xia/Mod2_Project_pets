@@ -36,7 +36,7 @@ class AdoptionsController < ApplicationController
     private
   
     def adoption_params
-        params.require(:adoption).permit(:status, :pet_id)
+        params.require(:adoption).permit(:pet_id)
     end 
 
 end

@@ -7,6 +7,11 @@ class PetsController < ApplicationController
      
     def show 
         @pet = Pet.find(params[:id])
+        # byebug
+        # @review = @pet.reviews.create( user: @current_user) 
+        # @rent = @pet.rents.create( user: @current_user) 
+        # @adoption = @pet.adoptions.create( user: @current_user) 
+        
     end 
   
     def new
