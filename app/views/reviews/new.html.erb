@@ -1,6 +1,9 @@
 <h1> reviews/new </h1>
 <h1> Hello World </h1>
 
+<%if @errors%>
+     <p style= "color:red ">  <%= @errors%> <p>
+<%end%>
 
 
  <%= form_for @review do |f| %>
@@ -20,6 +23,6 @@
   <%= f.label 'Content:' %>  <br>
   <%= f.text_area :content %><br><br>
 
-  <%= submit_tag "Create Review" %>
+  <%= f.submit "Submit Review" %>
 <% end %> 
 

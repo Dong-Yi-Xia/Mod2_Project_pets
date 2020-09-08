@@ -11,11 +11,23 @@
 <br>
 <br>
 
+<strong><%= @pet.name%>'s Reviews: </strong><br><br>
+<%@pet.reviews.each do |review|%>
+    <div style= "border:solid; margin:10px" >
+    Rating: <%= review.rating%><br><br>
+    Review: <%= review.content%><br>
+    </div>
+<%end%>
 
 <br>
-<br>
-<%=link_to "Rent Me!", new_rent_path %><br> <!-- figure out function for user, not index-->
-<br>
-<%=link_to "Review Me!", new_review_path %><br> <!-- figure out function for user, not index-->
-<br>
-<%=link_to "Adopt Me!", new_adoption_path %> <!-- figure out function for user, not index-->
+
+
+<hr>
+<nav>
+    <%=link_to "Review A Pet!", new_review_path %><br> <!-- figure out function for user, not index-->
+    <br>
+    <%=link_to "Rent A Pet!", new_rent_path %><br> <!-- figure out function for user, not index-->
+    <br>
+    <%=link_to "Adopt A Pet!", new_adoption_path %><br> <!-- figure out function for user, not index-->
+    <br>
+</nav>
