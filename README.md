@@ -13,16 +13,6 @@ The app implements Ruby on Rails MVC design structures and CRUD functionality.
 
 ![erd](app/assets/images/petmodels.jpg)
 
-2 independent models: User, Pet
-
-3 joiner models: Rent, Adoption, Review
-
-User ---< Rent >--- Pet
-
-User ---< Adoption >--- Pet
-
-User ---< Review >--- Pet
-
 ***
 ## Getting Started
 To run the "Pet" App, you will need to use the terminal on your computer.
