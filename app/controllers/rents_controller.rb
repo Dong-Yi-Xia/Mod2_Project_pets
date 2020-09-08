@@ -30,7 +30,7 @@ class RentsController < ApplicationController
     def destroy
         @rent = Rent.find(params[:id])
         @rent.delete 
-        redirect_to rents_path
+        redirect_to user_path(@current_user)
     end 
   
     private
