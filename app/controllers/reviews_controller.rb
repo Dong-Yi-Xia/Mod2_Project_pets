@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
 
-    def index 
-        @reviews = Review.all
-    end
+    # def index 
+    #     @reviews = Review.all
+    # end
      
     def show 
         @review = Review.find(params[:id])
@@ -22,16 +22,6 @@ class ReviewsController < ApplicationController
             redirect_to new_review_path
         end
     end 
-
-    # def create 
-    #     @review = Review.new(review_params)
-    #     if @review.save 
-    #         redirect_to "/pets/#{pet.id}"
-    #     else
-    #         flash.now[:notice] = "One or more fields is blank."
-    #         render :new
-    #     end
-    # end
   
     def edit
         @review = Review.find(params[:id])

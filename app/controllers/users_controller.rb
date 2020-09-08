@@ -4,30 +4,11 @@ class UsersController < ApplicationController
     # determine what before_actions will be
     # skip_before_action :authorization?, only: [:login, :handle_login, :new, :create, :show]
 
-    # def login
-    #     @error = flash[:error]
-    #   end
-
-    # def handle_login
-    #     @user = User.find_by(name: params[:name])
-    #     if @user && @user.authenticate(params[:password]) 
-    #       session[:user_id] = @user.id
-    #       redirect_to user_path(@user)
-    #     else
-    #       flash[:error] = "Incorrect name or password"
-    #       redirect_to login_path
-    #     end
-    #   end
-
-    # def logout
-    #     session[:user_id] = nil
-    #     redirect_to login_path
-    #   end
 
     # def index
     #     @users = User.all
     # end
-    # # Do we need index method? 
+    
 
     def show  
         @user = User.find(params[:id])

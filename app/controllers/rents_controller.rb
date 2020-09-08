@@ -1,12 +1,12 @@
 class RentsController < ApplicationController
 
-    def index 
-        @rents = Rent.all
-    end
+    # def index 
+    #     @rents = Rent.all
+    # end
      
-    def show 
-        @rent = Rent.find(params[:id])
-    end 
+    # def show 
+    #     @rent = Rent.find(params[:id])
+    # end 
   
     def new
         @rent = Rent.new
