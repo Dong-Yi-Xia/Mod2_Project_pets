@@ -1,5 +1,7 @@
 <h1><%= @pet.name %>'s Profile </h1>
 
+<%= image_tag (@pet.image_url) %><br>
+<br>
 <strong>Species:</strong> <%= @pet.species.titleize %><br>
 <br>
 <strong>Gender:</strong> <%= @pet.gender.titleize %><br>

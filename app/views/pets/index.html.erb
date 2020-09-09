@@ -1,6 +1,12 @@
 <h1> Browse All Pets</h1>
 <ul>
     <% @pets.each do |pet| %>
-      <li><%= link_to pet.name, pet_path(pet) %></li><br>
+      <li>
+        <a href = <%= pet_path(pet) %> >
+          <%= image_tag (pet.image_url)%><br>
+        </a>
+          <%= link_to pet.name, pet_path(pet) %><br>
+      </li>
+      <br>
     <% end %>
   </ul>
