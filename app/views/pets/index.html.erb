@@ -1,7 +1,4 @@
-<h1> pets/index </h1>
-<h1> Hello World </h1>
-
-
+<h1> Browse All Pets</h1>
 <ul>
     <% @pets.each do |pet| %>
       <li><%= link_to pet.name, pet_path(pet) %></li><br>
