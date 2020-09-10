@@ -9,7 +9,7 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"><%= pet.name %></h5>
-                            <p class="card-text"><%= pet.bio[0..50]%>....</p>
+                            <p class="card-text"> <%= pet.bio[0..50]%>....</p>
                             <a href= <%= pet_path(pet) %> class="btn btn-primary" >Read More</a>
                         </div>    
                     </div>   
