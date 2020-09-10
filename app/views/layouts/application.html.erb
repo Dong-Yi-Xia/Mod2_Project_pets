@@ -10,52 +10,53 @@
   </head>
 
   <body>
-<ul class = "nav nav-pills nav-fill">
-      <li class="nav-item">
-        <a class="nav-link" href=<%= home_path %>>Home</a>
-        </li>
-      <%if logged_in_status %>
+    <div class="nav_container">
+      <ul class = "nav nav-pills nav-fill">
         <li class="nav-item">
-        <a class="nav-link" href=<%= pets_path %>>All Pets</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href=<%= user_path(@current_user) %>>My Profile</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href=<%= new_review_path %>>Write a Review!</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href=<%= new_rent_path %>>Book a Playdate!</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href=<%= new_adoption_path %>>Adopt Me!</a>
-        </li>
-      <%end%>
-        <li class="nav-item">
-           <a class="nav-link" href=<%= about_path %>>About</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href=<%= contact_path %>>Contact</a>
-        </li>
+          <a class="nav-link" href=<%= home_path %>>Home</a>
+          </li>
+        <%if logged_in_status %>
+          <li class="nav-item">
+          <a class="nav-link" href=<%= pets_path %>>All Pets</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href=<%= user_path(@current_user) %>>My Profile</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href=<%= new_review_path %>>Write a Review!</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href=<%= new_rent_path %>>Book a Playdate!</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href=<%= new_adoption_path %>>Adopt Me!</a>
+          </li>
+        <%end%>
+          <li class="nav-item">
+            <a class="nav-link" href=<%= about_path %>>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=<%= contact_path %>>Contact</a>
+          </li>
 
-      <%if logged_in_status %>
-       <li class="nav-item">
-           <%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %>
-        </li>
+        <%if logged_in_status %>
         <li class="nav-item">
-            <%= link_to "Delete My Account", @current_user, method: :delete, class: "nav-link" %>
-        </li>
-      <% else %>
-         <li class="nav-item">
-            <%= link_to "Login", login_path, method: :get, class: "nav-link" %>
-        </li>
-         <li class="nav-item">
-           <%= link_to "Signup", signup_path, method: :get, class: "nav-link" %>
-        </li>
-      <%end%>
+            <%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+              <%= link_to "Delete My Account", @current_user, method: :delete, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+              <%= link_to "Login", login_path, method: :get, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Signup", signup_path, method: :get, class: "nav-link" %>
+          </li>
+        <%end%>
+      </ul>
+   </div>
 
-    </ul>
- 
     <hr>
     <br>
 
