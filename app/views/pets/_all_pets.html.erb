@@ -1,5 +1,8 @@
-<!-- <div class="container"> -->
-    <div class="card" style="max-width: 20rem; padding: 1em">
+
+
+<div class="pets_container" > 
+    <div class="card" style="max-width: 20rem; padding: 1em; border:solid">
+        <div>
             <% @pets.each do |pet| %>
                 <a href = <%= pet_path(pet) %> >
                 <%= image_tag (pet.image_url), class: "card-img-top"%> 
@@ -10,5 +13,6 @@
                     <a href= <%= pet_path(pet) %> class="btn btn-primary">Read More</a>
                 </div>    
             <% end %>
+        </div>   
     </div>
-<!-- </div> -->
+</div> 

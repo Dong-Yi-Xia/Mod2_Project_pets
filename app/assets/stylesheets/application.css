@@ -15,12 +15,27 @@
  */
 
  body {
-     background-color: white
-     background-size: 100%;
-     margin: 2em;
+    background: url("Horizontal_02.jpg") no-repeat center center fixed;
+    background-size: cover; 
+    overflow: visible;
  }
 
 ul {
      list-style-type: none;
  }
  /* url(Horizontal_05.jpg) */
+
+ .nav-item:hover{
+    background-color: aquamarine;
+    border-radius: 50px;
+ }
+
+ .nav-link:hover{
+     font-size: 1.25em;
+ }
+
+ .error_message {
+     color: red;
+     font-size: 2.5em;
+    text-align: center;
+ }

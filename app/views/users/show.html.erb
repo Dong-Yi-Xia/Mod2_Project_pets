@@ -1,35 +1,36 @@
-<h1> My Profile </h1>
 
+<div class="profile_container">
+    <h1> My Profile </h1>
 
+    <h3>My Reviews</h3>
+        <% @current_user.reviews.each do |review|%>
+            Name of Pet: <%= link_to review.pet.name, pet_path(review.pet) %><br>
+            Species: <%= review.pet.species %><br>
+            My Rating: <%= review.rating %><br>
+            My Review: <%= review.content %><br>
+            <%= link_to "Update This Review", edit_review_path(review) %>
+            <br>
+            <%= link_to "Delete This Review", review, :method => :delete  %>
+            <br><br>       
+    <%end%>
 
-<h3>My Reviews</h3>
-    <% @current_user.reviews.each do |review|%>
-        Name of Pet: <%= link_to review.pet.name, pet_path(review.pet) %><br>
-        Species: <%= review.pet.species %><br>
-        My Rating: <%= review.rating %><br>
-        My Review: <%= review.content %><br>
-         <%= link_to "Update This Review", edit_review_path(review) %>
-         <br>
-        <%= link_to "Delete This Review", review, :method => :delete  %>
-        <br><br>       
-<%end%>
+    <h3>My Pet Rentals</h3>
+        <% @current_user.rents.each do |rent|%>
+            Name of Pet: <%= link_to rent.pet.name, pet_path(rent.pet) %><br>
+            Species: <%= rent.pet.species %><br>
+            Duration: <%= rent.duration%> Minutes <br>
+            Location: <%= rent.location%> <br>
+            <%= link_to "Update This Appointment ", edit_rent_path(rent) %>
+            <br>
+            <%= link_to "Cancel This Appointment", rent, :method => :delete  %>
+            <br><br>
+    <%end%>
 
-<h3>My Pet Rentals</h3>
-    <% @current_user.rents.each do |rent|%>
-        Name of Pet: <%= link_to rent.pet.name, pet_path(rent.pet) %><br>
-        Species: <%= rent.pet.species %><br>
-        Duration: <%= rent.duration%> Minutes <br>
-        Location: <%= rent.location%> <br>
-          <%= link_to "Update This Appointment ", edit_rent_path(rent) %>
-         <br>
-        <%= link_to "Cancel This Appointment", rent, :method => :delete  %>
-        <br><br>
-<%end%>
-
-<h3>My Adoptions</h3>
-    <% @current_user.adoptions.each do |adoption|%>
-        Name of Pet: <%= link_to adoption.pet.name, pet_path(adoption.pet) %><br>
-        Species: <%= adoption.pet.species %><br>
-     
-        <br>
-<%end%>
+    <h3>My Adoptions</h3>
+        <% @current_user.adoptions.each do |adoption|%>
+            Name of Pet: <%= link_to adoption.pet.name, pet_path(adoption.pet) %><br>
+            Species: <%= adoption.pet.species %><br>
+        
+            <br>
+    <%end%>
+</div>

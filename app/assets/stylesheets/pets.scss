@@ -1,3 +1,28 @@
 // Place all the styles related to the pets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.pets_container {
+    border:solid; 
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, 10em);
+    column-count: 3;
+}
+
+
+.individual_pet_img {
+    width: 30%;
+    height: 30%;
+}
+
+.pet_info_box {
+    border:solid;
+    background-color: white;
+}
+
+body.all_pets {
+    background: url("Horizontal_04.jpg") no-repeat center center fixed;
+    background-size: cover; 
+    overflow: visible;
+}

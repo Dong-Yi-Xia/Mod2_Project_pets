@@ -1,9 +1,13 @@
-<h1> Write a New Review! </h1>
+<div class="review_container">
+     <h1> Write a New Review! </h1>
 
-<%if @errors%>
-     <p style= "color:red ">  <%= @errors%> <p>
-<%end%>
+     <div class="error_message">
+          <%if @errors%>
+          <%= @errors%> <p>
+          <%end%>
+     </div>
 
+     <%= render "form" %>
+</div
 
-<%= render "form" %>
 

@@ -12,46 +12,54 @@
   <body>
 <ul class = "nav nav-pills nav-fill">
       <li class="nav-item">
-        <a class="nav-link active" href=<%= home_path %>>Home</a>
+        <a class="nav-link" href=<%= home_path %>>Home</a>
         </li>
       <%if logged_in_status %>
         <li class="nav-item">
         <a class="nav-link" href=<%= pets_path %>>All Pets</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link active" href=<%= user_path(@current_user) %>>My Profile</a>
+        <a class="nav-link" href=<%= user_path(@current_user) %>>My Profile</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href=<%= new_review_path %>>Write a Review!</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link active" href=<%= new_rent_path %>>Book a Playdate!</a>
+        <a class="nav-link" href=<%= new_rent_path %>>Book a Playdate!</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href=<%= new_adoption_path %>>Adopt Me!</a>
         </li>
       <%end%>
         <li class="nav-item">
-        <a class="nav-link active" href=<%= about_path %>>About</a>
+           <a class="nav-link" href=<%= about_path %>>About</a>
         </li>
          <li class="nav-item">
-        <a class="nav-link" href=<%= contact_path %>>Contact</a>
-      </li>
+          <a class="nav-link" href=<%= contact_path %>>Contact</a>
+        </li>
+
+      <%if logged_in_status %>
+       <li class="nav-item">
+           <%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+            <%= link_to "Delete My Account", @current_user, method: :delete, class: "nav-link" %>
+        </li>
+      <% else %>
+         <li class="nav-item">
+            <%= link_to "Login", login_path, method: :get, class: "nav-link" %>
+        </li>
+         <li class="nav-item">
+           <%= link_to "Signup", signup_path, method: :get, class: "nav-link" %>
+        </li>
+      <%end%>
+
     </ul>
-    <br>
+ 
     <hr>
     <br>
 
-<div>
-  <% if logged_in_status %>
-        <h2>Welcome <%= @current_user.name.titleize %>! </h2>
-        <%= button_to "Log Out", logout_path, method: :delete %>
-        <%= button_to "Delete My Account", @current_user, method: :delete %>
-    <% else %>
-        <%= button_to "Login", login_path, method: :get%>
-        <%= button_to "Signup", signup_path, method: :get%>
-  <%end%>
-</div>
+
 
     <%= yield %>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -1,20 +1,25 @@
-
-<% if @errors %>
-    <% @errors.each do |error| %>
-     <p style= "color:red ">  <%= error%>  </p>
+<div class="error_message">
+    <% if @errors %>
+        <% @errors.each do |error| %>
+        <%= error%>  </p>
+        <%end%>
     <%end%>
-<%end%>
+</div>
 
-<h1> Create a new account </h1>
+<div class="signup_container">
 
-<%= form_for @user do |f| %>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
-    <br>
-    <%= f.label :password %> <br>
-    <%= f.password_field :password%><br>
-    <%= f.label :password_confirmation %> <br>
-    <%= f.password_field :password_confirmation%><br>
-    <br>
-    <%= f.submit "Sign Up Now"%>
-<%end%>
+    <h1> Create a new account </h1>
+
+    <%= form_for @user do |f| %>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %><br>
+        <br>
+        <%= f.label :password %> <br>
+        <%= f.password_field :password%><br>
+        <%= f.label :password_confirmation %> <br>
+        <%= f.password_field :password_confirmation%><br>
+        <br>
+        <%= f.submit "Sign Up Now"%>
+    <%end%>
+
+</div>
