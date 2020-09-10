@@ -3,15 +3,14 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-// .pets_container {
-//     margin: 5%;
-// }
+.pets_container {
+    margin: 5%;
+}
 
 .card{
     max-width: 20rem; 
     max-height: 35rem; 
     padding: 1em; 
-    border:solid; 
     margin-bottom: 2em;
 }
 
@@ -33,5 +32,4 @@ body.all_pets {
     background: url("Horizontal_04.jpg") no-repeat center center fixed;
     background-size: cover; 
     overflow: visible;
-    margin: 5%;
 }

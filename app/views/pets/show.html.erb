@@ -19,7 +19,7 @@
 
     <strong><%= @pet.name%>'s Reviews: </strong><br><br>
     <%@pet.reviews.each do |review|%>
-        <div style= "border:solid; margin:10px" >
+        <div >
         Rating: <%= review.rating%><br><br>
         Review: <%= review.content%><br>
         </div>
