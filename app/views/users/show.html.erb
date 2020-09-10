@@ -1,8 +1,9 @@
 <body class="user_profile_page">
 <div class="profile_container">
-    <h1> My Profile </h1>
-    <h2>Logged in: <%=@current_user.name%> </h2> <br>
-
+    <div class="user_header">
+        <h1>My Profile </h1>
+        <h2>Welcome <%=@current_user.name%>! </h2> <br>
+    </div>
     <h3 class="sub_header">My Reviews</h3>
         <% @current_user.reviews.each do |review|%>
             Name of Pet: <%= link_to review.pet.name, pet_path(review.pet) %><br>

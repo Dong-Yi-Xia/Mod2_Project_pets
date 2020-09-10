@@ -12,6 +12,13 @@
     opacity: 100%;
 }
 
+.user_header {
+    color: rgb(42, 120, 238);
+    text-align: left;
+    font-size: 1.75em;
+    font-weight: 700;
+}
+
 .sub_header {
     color:rgb(119, 77, 233);
 }
@@ -22,3 +29,4 @@ body.user_profile_page {
     background-size: cover; 
     overflow: visible;
 }
+
