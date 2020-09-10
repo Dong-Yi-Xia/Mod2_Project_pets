@@ -1,3 +1,39 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.login_container {
+    // border:solid;
+    // background-image: url(Horizontal_02.jpg);
+    // background-repeat: no-repeat
+    // background-size: 50% 100%;
+    // background-position: center;
+    
+}
+
+.login_box {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-left: 50%;
+    opacity: 80%;
+}
+
+.login_box input:hover{
+    background-color: aquamarine;
+    width: 40%;
+}
+
+
+.signup_container {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-left: 50%;
+    opacity: 80%;
+}
+
+.signup_container input:hover {
+    background-color:aquamarine;
+    width: 40%;
+}

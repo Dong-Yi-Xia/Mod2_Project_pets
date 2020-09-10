@@ -1,3 +1,17 @@
 // Place all the styles related to the welcomes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+body.contact_page {
+        background: url("Horizontal_04.jpg") no-repeat center center fixed;
+        background-size: cover; 
+        overflow: visible;
+}
+
+body.about_page{
+    background: url("Vertical_02.jpg") no-repeat center center fixed;
+    background-size: cover; 
+    overflow: visible;
+}
+

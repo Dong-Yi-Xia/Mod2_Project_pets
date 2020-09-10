@@ -1,27 +1,31 @@
+
+
 <h1><%= @pet.name %>'s Profile </h1>
 
-<%= image_tag (@pet.image_url) %><br>
-<br>
-<strong>Species:</strong> <%= @pet.species.titleize %><br>
-<br>
-<strong>Gender:</strong> <%= @pet.gender.titleize %><br>
-<br>
-<strong>Bio:</strong> <%= @pet.bio %>
-<br>
-<br>
-<strong>Adoption Status:</strong> <%= @pet.adoption_status %>
-<br>
-<br>
 
-<strong><%= @pet.name%>'s Reviews: </strong><br><br>
-<%@pet.reviews.each do |review|%>
-    <div style= "border:solid; margin:10px" >
-    Rating: <%= review.rating%><br><br>
-    Review: <%= review.content%><br>
-    </div>
-<%end%>
+<%= image_tag (@pet.image_url), class: "individual_pet_img" %><br>
 
-<br>
+<div class="pet_info_box">
+    <strong>Species:</strong> <%= @pet.species.titleize %><br>
+    <br>
+    <strong>Gender:</strong> <%= @pet.gender.titleize %><br>
+    <br>
+    <strong>Bio:</strong> <%= @pet.bio %>
+    <br>
+    <br>
+    <strong>Available to Adopt? </strong> <%= @pet.adoption_status.titleize %>
+    <br>
+    <br>
+
+    <strong><%= @pet.name%>'s Reviews: </strong><br><br>
+    <%@pet.reviews.each do |review|%>
+        <div style= "border:solid; margin:10px" >
+        Rating: <%= review.rating%><br><br>
+        Review: <%= review.content%><br>
+        </div>
+    <%end%>
+
+</div>
 
 
 <hr>
@@ -33,3 +37,4 @@
     <%=link_to "Adopt A Pet!", new_adoption_path %><br> <!-- figure out function for user, not index-->
     <br>
 </nav>
+

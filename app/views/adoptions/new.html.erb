@@ -1,10 +1,18 @@
-<h1>Adopt a Pet!</h1>
 
-<%= form_for @adoption do |f| %>
-    <%= f.label "Pet's Name" %>
-    <%= f.collection_select :pet_id, @adoption.up_for_adoption, :id, :name %><br>
-    <br>
+<body class="adopt_page">
+    <div class="adoption_container">
 
-    <%= f.submit "Adopt this pet!"%>
+        <h1>Adopt a Pet!</h1>
 
-<% end %>
+        <%= form_for @adoption do |f| %>
+            <%= f.label "Pet's Name" %>
+            <%= f.collection_select :pet_id, @adoption.up_for_adoption, :id, :name %><br>
+            <br>
+
+            <%= f.submit "Adopt this pet!"%>
+
+        <% end %>
+
+    </div>
+</body>
+
