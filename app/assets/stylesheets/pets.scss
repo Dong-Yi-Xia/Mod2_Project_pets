@@ -3,13 +3,21 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.pets_container {
+// .pets_container {
+//     margin: 5%;
+// }
+
+.card{
+    max-width: 20rem; 
+    max-height: 35rem; 
+    padding: 1em; 
     border:solid; 
-    display: grid;
-    // grid-template-columns: repeat(auto-fill, 10em);
-    column-count: 3;
+    margin-bottom: 2em;
 }
 
+.btn {
+    float: right;
+}
 
 .individual_pet_img {
     width: 30%;
@@ -25,4 +33,5 @@ body.all_pets {
     background: url("Horizontal_04.jpg") no-repeat center center fixed;
     background-size: cover; 
     overflow: visible;
+    margin: 5%;
 }
