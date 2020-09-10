@@ -6,14 +6,15 @@
 .rent_container {
     display: block;
     width: 50%;
-    text-align: center;
-    margin-left: 50%;
-    opacity: 80%;
+    text-align: left;
+    
+    opacity: 100%;
 }
 
 body.playdate_page{
-    background: url("Vertical_06.jpg") no-repeat center center fixed;
+    background: url("Vertical_11.jpg") no-repeat center center fixed;
     background-size: cover; 
     overflow: visible;
-    background-position-y: 70%;
+    background-position-y: 20%;
+
 }

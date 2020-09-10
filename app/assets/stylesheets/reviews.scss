@@ -6,7 +6,12 @@
 .review_container {
     display: block;
     width: 50%;
-    text-align: center;
-    margin-left: 50%;
-    opacity: 80%;
+    text-align: left;
+    opacity: 100%;
+}
+
+body.new_review_page {
+    background: url("Vertical_10.jpg") no-repeat center center fixed;
+    background-size: cover; 
+    overflow: visible;
 }

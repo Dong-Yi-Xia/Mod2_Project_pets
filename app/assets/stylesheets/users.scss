@@ -6,11 +6,19 @@
 .profile_container {
     display: block;
     width: 100%;
-    text-align: center;
+    margin-left: 50%;
+    text-align: left;
     padding-left: 10%;
-    opacity: 80%;
+    opacity: 100%;
 }
 
 .sub_header {
     color:rgb(119, 77, 233);
+}
+
+body.user_profile_page {
+    background: url("Vertical_09.jpg") no-repeat center center fixed;
+    background-position-y: 35%;
+    background-size: cover; 
+    overflow: visible;
 }
