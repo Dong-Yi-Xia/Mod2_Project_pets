@@ -1,6 +1,6 @@
 <body class="user_profile_page">
 <div class="profile_container">
-    <h1> My Profile </h1>
+    <h1> My Profile: <%=@current_user.name%> </h1> <br>
 
     <h3 class="sub_header">My Reviews</h3>
         <% @current_user.reviews.each do |review|%>
