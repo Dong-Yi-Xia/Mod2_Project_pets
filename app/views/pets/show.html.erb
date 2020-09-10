@@ -1,40 +1,40 @@
 
 
-<h1><%= @pet.name %>'s Profile </h1>
+<body class="individual_pet_page">
+    <h1 class="title"><%= @pet.name %>'s Profile </h1>
+    <%= image_tag (@pet.image_url), class: "individual_pet_img" %><br>
+
+    <div class="pet_info_box">
+        <strong>Species:</strong> <%= @pet.species.titleize %><br>
+        <br>
+        <strong>Gender:</strong> <%= @pet.gender.titleize %><br>
+        <br>
+        <strong>Bio:</strong> <%= @pet.bio %>
+        <br>
+        <br>
+        <strong>Available to Adopt? </strong> <%= @pet.adoption_status.titleize %>
+        <br>
+        <br>
+
+        <strong><%= @pet.name%>'s Reviews: </strong><br><br>
+        <%@pet.reviews.each do |review|%>
+            <div >
+            Rating: <%= review.rating%><br><br>
+            Review: <%= review.content%><br>
+            </div>
+        <%end%>
+
+    </div>
 
 
-<%= image_tag (@pet.image_url), class: "individual_pet_img" %><br>
+    <hr>
+    <nav>
+        <%=link_to "Review A Pet!", new_review_path %><br> <!-- figure out function for user, not index-->
+        <br>
+        <%=link_to "Rent A Pet!", new_rent_path %><br> <!-- figure out function for user, not index-->
+        <br>
+        <%=link_to "Adopt A Pet!", new_adoption_path %><br> <!-- figure out function for user, not index-->
+        <br>
+    </nav>
 
-<div class="pet_info_box">
-    <strong>Species:</strong> <%= @pet.species.titleize %><br>
-    <br>
-    <strong>Gender:</strong> <%= @pet.gender.titleize %><br>
-    <br>
-    <strong>Bio:</strong> <%= @pet.bio %>
-    <br>
-    <br>
-    <strong>Available to Adopt? </strong> <%= @pet.adoption_status.titleize %>
-    <br>
-    <br>
-
-    <strong><%= @pet.name%>'s Reviews: </strong><br><br>
-    <%@pet.reviews.each do |review|%>
-        <div >
-        Rating: <%= review.rating%><br><br>
-        Review: <%= review.content%><br>
-        </div>
-    <%end%>
-
-</div>
-
-
-<hr>
-<nav>
-    <%=link_to "Review A Pet!", new_review_path %><br> <!-- figure out function for user, not index-->
-    <br>
-    <%=link_to "Rent A Pet!", new_rent_path %><br> <!-- figure out function for user, not index-->
-    <br>
-    <%=link_to "Adopt A Pet!", new_adoption_path %><br> <!-- figure out function for user, not index-->
-    <br>
-</nav>
-
+</body>

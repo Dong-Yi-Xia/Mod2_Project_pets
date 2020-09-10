@@ -12,24 +12,35 @@
     max-height: 35rem; 
     padding: 1em; 
     margin-bottom: 2em;
+    box-shadow: 5px 10px 30px #888888;
 }
 
-.btn {
-    float: right;
-}
+// .btn {
+//     float: right;
+// }
 
 .individual_pet_img {
-    width: 30%;
-    height: 30%;
+    display: block;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    box-shadow: 5px 10px 30px #888888;
 }
 
 .pet_info_box {
-    border:solid;
-    background-color: white;
+    // border:solid;
+    // background-color: white;
+    font-size: 1.5em;
 }
 
 body.all_pets {
     background: url("Horizontal_04.jpg") no-repeat center center fixed;
+    background-size: cover; 
+    overflow: visible;
+}
+
+body.individual_pet_page{
+    background: url("Horizontal_06.jpg") no-repeat center center fixed;
     background-size: cover; 
     overflow: visible;
 }
